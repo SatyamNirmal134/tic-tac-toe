@@ -1,0 +1,110 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* Game container */
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Board section */
+.game-board {
+  background: #111;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Status text */
+.status {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #00e5ff;
+}
+
+/* Board rows */
+.board-row {
+  display: flex;
+}
+
+/* Square buttons */
+.square {
+  background: #1e1e1e;
+  border: 2px solid #333;
+  width: 90px;
+  height: 90px;
+  margin: 4px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.square:hover {
+  background: #292929;
+  transform: scale(1.05);
+}
+
+.square:active {
+  transform: scale(0.95);
+}
+
+/* X and O colors */
+.square:contains("X") {
+  color: #ff5252;
+}
+
+.square:contains("O") {
+  color: #40c4ff;
+}
+
+/* Game info / history */
+.game-info {
+  background: #111;
+  padding: 20px;
+  border-radius: 16px;
+  min-width: 200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+/* History buttons */
+.game-info button {
+  width: 100%;
+  background: #1e1e1e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.game-info button:hover {
+  background: #00e5ff;
+  color: #000;
+}
